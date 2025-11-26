@@ -29,7 +29,7 @@ https://github.com/matanatkhalil/To-Do-List
 
 ## Future Improvements (Planned)
 - Add the number of total, completed, and incomplete tasks to the page 
-- Make the tracker for 7 days of the week 
+- Add separate to-do lists for each day of the week (Monday–Sunday)
 - Create lists for monthly and yearly tasks too
 - Add three buttons to the top of the page, by clicking on which users can navigate between their yearly, monthly, and weekly to-do lists
 - LocalStorage persistence (tasks survive page refresh)
