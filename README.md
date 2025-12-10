@@ -25,7 +25,8 @@ A minimal and elegant to-do list web app with a nature-inspired design. Add task
 https://github.com/matanatkhalil/To-Do-List
 
 ## Screenshot
-<img width="1365" height="601" alt="screenshot_to_do_list" src="https://github.com/user-attachments/assets/4761c095-f74d-473d-a6de-8b351711749d" />
+<img width="1362" height="604" alt="voice-to-text-to-do-app" src="https://github.com/user-attachments/assets/f6dfd00b-b00f-47bc-935b-6c99d3717ebd" />
+
 
 ## Future Improvements (Planned)
 - Add the number of total, completed, and incomplete tasks to the page 
