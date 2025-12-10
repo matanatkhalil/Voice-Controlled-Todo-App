@@ -19,11 +19,11 @@ taskInput.addEventListener("keydown", (event)=>{
         const text = document.createElement('span');
         text.textContent = taskText;
 
-       
         task.appendChild(circle);
         task.appendChild(text);
         taskList.appendChild(task);
 
         taskInput.value = '';
     }
+    
 })
