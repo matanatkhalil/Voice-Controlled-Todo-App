@@ -1,4 +1,4 @@
-# To Do List
+# Voice-Controlled Todo App
 A minimal and elegant to-do list web app with a nature-inspired design. Add tasks, mark them as complete with a satisfying green check, or clear everything with one click.
 
 ## Technologies Used
@@ -7,7 +7,8 @@ A minimal and elegant to-do list web app with a nature-inspired design. Add task
 - Vanilla JavaScript (no frameworks)
 
 ## Features
-- Add tasks by typing and pressing Enter  
+- Add tasks by typing and pressing Enter 
+- Speak tasks and app adds them to the list
 - Click the green circle to mark tasks as complete   
 - Long tasks automatically wrap  
 - "Clear Now" button to reset everything  
