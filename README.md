@@ -5,10 +5,11 @@ A minimal and elegant to-do list web app with a nature-inspired design. Add task
 - HTML
 - CSS
 - Vanilla JavaScript (no frameworks)
+- Web Speech API
 
 ## Features
 - Add tasks by typing and pressing Enter 
-- Speak tasks and app adds them to the list
+- Speak tasks and app adds them to the list as the project uses the Web Speech API for voice-controlled task input
 - Click the green circle to mark tasks as complete   
 - Long tasks automatically wrap  
 - "Clear Now" button to reset everything  
@@ -23,7 +24,8 @@ A minimal and elegant to-do list web app with a nature-inspired design. Add task
 
   
 ## Live Demo
-https://github.com/matanatkhalil/To-Do-List
+Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-todo-app.netlify.app/)
+
 
 ## Screenshot
 <img width="1362" height="604" alt="voice-to-text-to-do-app" src="https://github.com/user-attachments/assets/f6dfd00b-b00f-47bc-935b-6c99d3717ebd" />
