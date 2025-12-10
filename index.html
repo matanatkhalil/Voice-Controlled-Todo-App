@@ -10,17 +10,21 @@
         <div class="wrapper">
             <div class="box_title">
                 <h1><strong>To Do List</strong></h1>
-                <p><strong>Stay Hydrated and Focused </strong>💛🌼🌱</p>
+                <p><strong>Stay Hydrated and Focused </strong>💛🌱</p>
             </div>
             <div class="box_tasks">
-                <input type="text" id="task_input" placeholder="Write a task and press Enter">
+                <input type="text" id="task_input" placeholder="Write a task and press Enter"><br>
+                <button id="voice-button">Add Task by Voice
+                    <span id="mic-icon" class="mic-off"><svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 18h2v4h-2v-4z"/>
+                        </svg>
+                    </span>
+                </button>
                 <div id="task_list"></div>
             </div>
             <div class="box_button">
-                <button id="clear-btn">Clear Now</button>
-                
-            </div> 
-                         
+                <button id="clear-btn">Clear Now</button>             
+            </div>                   
         </div>
         <script src="script.js"></script>
     </body>
