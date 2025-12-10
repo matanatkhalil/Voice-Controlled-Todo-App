@@ -1,5 +1,5 @@
 body {font-family: 'Georgia', Garamond, serif;
-background-image: url('images/image2.source-unsplash.jpg'); /* Specify the path to your image */
+background-image: url('images/image2.source-unsplash.jpg'); 
   background-size: cover; /* Scale the image to cover the entire viewport */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the image from repeating */
