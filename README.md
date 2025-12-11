@@ -17,6 +17,7 @@ A minimal to-do list web app that incorporates a basic assistive-tech element: v
 - Long tasks automatically wrap  
 - "Clear Now" button to reset everything
 - LocalStorage persistence (tasks survive page refresh)
+- Responsive layout that works on mobile devices too
 - Serene, focus-friendly design with custom background
 - Deployed to Netlify
 
@@ -37,11 +38,11 @@ Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-tod
 
 
 ## Screenshot
-<img width="1362" height="604" alt="voice-to-text-to-do-app" src="https://github.com/user-attachments/assets/f6dfd00b-b00f-47bc-935b-6c99d3717ebd" />
+<img width="1345" height="600" alt="todo-app-ss" src="https://github.com/user-attachments/assets/c025e7dd-2356-4f88-91bb-3ea930845266" />
+
 
 
 ## Future Improvements (Planned)
-- Works on mobile
 - Option to edit and delete tasks
 - Dark mode toggle 🌙
 - Confetti animation when all tasks are completed
