@@ -15,7 +15,8 @@ A minimal to-do list web app that incorporates a basic assistive-tech element: v
 - Alert displayed when the browser doesn't support speech
 - Click the green circle to mark tasks as complete   
 - Long tasks automatically wrap  
-- "Clear Now" button to reset everything  
+- "Clear Now" button to reset everything
+- LocalStorage persistence (tasks survive page refresh)
 - Serene, focus-friendly design with custom background
 - Deployed to Netlify
 
@@ -40,7 +41,6 @@ Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-tod
 
 
 ## Future Improvements (Planned)
-- LocalStorage persistence (tasks survive page refresh)
 - Works on mobile
 - Option to edit and delete tasks
 - Dark mode toggle 🌙
