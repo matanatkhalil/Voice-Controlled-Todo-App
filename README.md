@@ -1,5 +1,5 @@
 # Voice-Controlled Todo App
-A minimal and elegant to-do list web app with a nature-inspired design. Add tasks, mark them as complete with a satisfying green check, or clear everything with one click.
+A minimal to-do list web app that incorporates a basic assistive-tech element: voice-controlled task input. Users can add tasks by speaking, type if preferred, and manage tasks with simple, clear UI interactions.
 
 ## Technologies Used
 - HTML
@@ -9,11 +9,14 @@ A minimal and elegant to-do list web app with a nature-inspired design. Add task
 
 ## Features
 - Add tasks by typing and pressing Enter 
-- Speak tasks and app adds them to the list as the project uses the Web Speech API for voice-controlled task input
+- Speak a task, and it will be added to the list as the app uses the Web Speech API for voice-controlled task input
+- Visual feedback (mic icon changes when listening)
+- Alert displayed when the browser doesn't support speech
 - Click the green circle to mark tasks as complete   
 - Long tasks automatically wrap  
 - "Clear Now" button to reset everything  
 - Serene, focus-friendly design with custom background
+- Deployed to Netlify
 
 ## What I Learned & Practiced
 - Perfect vertical centering with `align-items: center` on multi-line flex items
@@ -21,6 +24,10 @@ A minimal and elegant to-do list web app with a nature-inspired design. Add task
 - Word wrapping long text using `word-break` and `overflow-wrap`
 - Made the green task box grow automatically and scroll when full by means of `overflow-y: auto`
 - Dynamic DOM manipulation (adding/removing/toggling tasks)
+- Toggling UI state based on microphone activity (switching mic icon styles on `onstart` / `onend`)
+- Using CSS `@keyframes` to create simple pulse animations
+- Working with the Web Speech API (speech recognition events, transcripts, errors)
+
 
   
 ## Live Demo
@@ -32,13 +39,17 @@ Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-tod
 
 
 ## Future Improvements (Planned)
+- LocalStorage persistence (tasks survive page refresh)
+- Keyboard accessible (for users who prefer it)
+- Works on mobile
+- Option to edit and delete tasks
+- Dark mode toggle 🌙
+- Confetti animation when all tasks are completed
 - Add the number of total, completed, and incomplete tasks to the page 
 - Add separate to-do lists for each day of the week (Monday–Sunday)
 - Create lists for monthly and yearly tasks too
 - Add three buttons to the top of the page, by clicking on which users can navigate between their yearly, monthly, and weekly to-do lists
-- LocalStorage persistence (tasks survive page refresh)
-- Dark mode toggle 🌙
-- Confetti animation when all tasks are completed
+
 
 ## Feedback Welcome!
 Open an issue or reach out – always happy to connect.
