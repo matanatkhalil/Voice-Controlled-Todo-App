@@ -3,17 +3,31 @@ const taskList=document.getElementById("task_list")
 const boxTasks=document.querySelector(".box_tasks")
 const voiceButton=document.getElementById("voice-button")
 const micIcon=document.getElementById("mic-icon")
-clearBtn.addEventListener("click", ()=>{
-    taskList.innerHTML=""
-})
 const taskInput=document.getElementById("task_input")
-taskInput.addEventListener("keydown", (event)=>{
-    if (event.key==='Enter' && taskInput.value.trim()!=="") {
-        const taskText=taskInput.value.trim();
+
+const saveTasks=()=>{
+    const tasks=[];
+    taskList.querySelectorAll(".task").forEach((task)=>{
+        tasks.push({
+            text: task.querySelector("span").textContent,
+            completed: task.classList.contains("completed")
+        });
+    });
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+const createTaskElement=(taskText, isCompleted=false)=>{
         const task=document.createElement('div')
         task.classList.add('task')
+        if (isCompleted) {
+            task.classList.add("completed");
+        }
+
         const circle=document.createElement("div")
         circle.classList.add("task-circle")
+        if (isCompleted) {
+            circle.classList.add("completed");
+        }
 
         //Make the circle accessible
         circle.setAttribute("role", "button"); // tells assistive tech that it's actionable
@@ -26,6 +40,7 @@ taskInput.addEventListener("keydown", (event)=>{
             circle.classList.toggle("completed")
             task.classList.toggle("completed")
             circle.setAttribute("aria-pressed", circle.classList.contains("completed") ? "true" : "false");
+            saveTasks();
         });
 
         // Keyboard toggle: Enter or Space
@@ -35,6 +50,7 @@ taskInput.addEventListener("keydown", (event)=>{
               circle.classList.toggle("completed");
               task.classList.toggle("completed");
               circle.setAttribute("aria-pressed", circle.classList.contains("completed") ? "true" : "false");
+              saveTasks();
             }
         })
         const text = document.createElement('span');
@@ -43,9 +59,21 @@ taskInput.addEventListener("keydown", (event)=>{
         task.appendChild(circle);
         task.appendChild(text);
         taskList.appendChild(task);
+          
+};
 
+taskInput.addEventListener("keydown", (event) => {
+    if (event.key === 'Enter' && taskInput.value.trim() !== "") {
+        const taskText = taskInput.value.trim();
+        createTaskElement(taskText, false);  // Use the function
+        saveTasks();  // Save after adding
         taskInput.value = '';
-    }   
+    }
+});
+
+clearBtn.addEventListener("click", ()=>{
+    taskList.innerHTML=""
+    saveTasks(); // saves empty state
 })
 
 // Voice recognition feature
@@ -79,5 +107,15 @@ voiceButton.addEventListener("click", ()=>{
         console.log("Speech ended.");
         recognition.stop();
     };
-} 
-);
+});
+
+const loadTasks=()=>{
+    const tasks=JSON.parse(localStorage.getItem("tasks"));
+    if (tasks) {
+        tasks.forEach((taskData)=>{
+            createTaskElement(taskData.text, taskData.completed);      
+        });
+        }   
+}
+
+window.addEventListener("load", loadTasks);
