@@ -14,10 +14,29 @@ taskInput.addEventListener("keydown", (event)=>{
         task.classList.add('task')
         const circle=document.createElement("div")
         circle.classList.add("task-circle")
+
+        //Make the circle accessible
+        circle.setAttribute("role", "button"); // tells assistive tech that it's actionable
+        circle.setAttribute("tabindex", "0"); // makes it reacable by Tab
+        circle.setAttribute("aria-pressed", "false"); //reflects state
+        circle.setAttribute("aria-label", "Mark task as completed");
+        
+        // Mouse toggle
         circle.addEventListener("click", ()=>{
             circle.classList.toggle("completed")
             task.classList.toggle("completed")
+            circle.setAttribute("aria-pressed", circle.classList.contains("completed") ? "true" : "false");
         });
+
+        // Keyboard toggle: Enter or Space
+        circle.addEventListener("keydown", (e)=>{
+            if (e.key==="Enter" || e.key===" ") {
+              e.preventDefault(); // prevent scrolling for Space
+              circle.classList.toggle("completed");
+              task.classList.toggle("completed");
+              circle.setAttribute("aria-pressed", circle.classList.contains("completed") ? "true" : "false");
+            }
+        })
         const text = document.createElement('span');
         text.textContent = taskText;
 
