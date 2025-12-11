@@ -1,5 +1,5 @@
 # Voice-Controlled Todo App
-A minimal to-do list web app that incorporates a basic assistive-tech element: voice-controlled task input. Users can add tasks by speaking, type if preferred, and manage tasks with simple, clear UI interactions.
+A minimal to-do list web app that incorporates a basic assistive-tech element: voice-controlled task input. Users can add tasks by speaking, type if preferred, and manage tasks with simple, clear UI interactions. The app also includes keyboard-accessible control, which makes it usable for people who can’t rely on a mouse and instead interact through assistive devices such as switch controls, on-screen keyboards, or screen readers.
 
 ## Technologies Used
 - HTML
@@ -10,6 +10,7 @@ A minimal to-do list web app that incorporates a basic assistive-tech element: v
 ## Features
 - Add tasks by typing and pressing Enter 
 - Speak a task, and it will be added to the list as the app uses the Web Speech API for voice-controlled task input
+- Fully operable by keyboard (Tab to navigate, Enter/Space to activate) so it works with assistive tech that emulates keyboard events
 - Visual feedback (mic icon changes when listening)
 - Alert displayed when the browser doesn't support speech
 - Click the green circle to mark tasks as complete   
@@ -40,7 +41,6 @@ Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-tod
 
 ## Future Improvements (Planned)
 - LocalStorage persistence (tasks survive page refresh)
-- Keyboard accessible (for users who prefer it)
 - Works on mobile
 - Option to edit and delete tasks
 - Dark mode toggle 🌙
