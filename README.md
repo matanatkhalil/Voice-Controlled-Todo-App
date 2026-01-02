@@ -38,13 +38,13 @@ Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-tod
 
 
 ## Screenshot
-<img width="1345" height="600" alt="todo-app-ss" src="https://github.com/user-attachments/assets/c025e7dd-2356-4f88-91bb-3ea930845266" />
+<img width="1350" height="597" alt="ss_to_do_list" src="https://github.com/user-attachments/assets/bff8f23d-f95d-4113-847d-67ba1f9a7431" />
+
 
 
 
 ## Future Improvements (Planned)
 - Option to edit and delete tasks
-- Dark mode toggle 🌙
 - Confetti animation when all tasks are completed
 - Add the number of total, completed, and incomplete tasks to the page 
 - Add separate to-do lists for each day of the week (Monday–Sunday)
