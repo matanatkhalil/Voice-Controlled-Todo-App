@@ -119,3 +119,19 @@ const loadTasks=()=>{
 }
 
 window.addEventListener("load", loadTasks);
+
+// Confetti effect when all tasks are completed
+
+taskList.addEventListener("click", (event) => {
+    if (event.target.classList.contains("task-circle")) {
+        const total = taskList.querySelectorAll(".task").length; 
+        const completed = taskList.querySelectorAll(".task.completed").length;
+        if (completed === total) {
+            confetti({
+                particleCount: 111,
+                spread: 70, 
+                origin: { y: 0.6 }
+            });
+        }
+    }
+});
