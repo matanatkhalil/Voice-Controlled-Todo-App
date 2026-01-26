@@ -17,6 +17,7 @@ A minimal to-do list web app that incorporates a basic assistive-tech element: v
 - Long tasks automatically wrap  
 - "Clear Now" button to reset everything
 - LocalStorage persistence (tasks survive page refresh)
+- Confetti animation when all tasks are completed
 - Responsive layout that works on mobile devices too
 - Serene, focus-friendly design with custom background
 - Deployed to Netlify
@@ -45,7 +46,6 @@ Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-tod
 
 ## Future Improvements (Planned)
 - Option to edit and delete tasks
-- Confetti animation when all tasks are completed
 - Add the number of total, completed, and incomplete tasks to the page 
 - Add separate to-do lists for each day of the week (Monday–Sunday)
 - Create lists for monthly and yearly tasks too
