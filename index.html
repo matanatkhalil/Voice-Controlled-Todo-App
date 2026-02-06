@@ -1,35 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>To Do List</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <input type="checkbox" id="theme-toggle">
-        <main>
-        <div class="wrapper">
-            <div class="box_title">
-                <h1><strong>To Do List</strong></h1>
-                <p><strong>Stay Hydrated and Focused </strong>💛🌱</p>
-            </div>
-            <div class="box_tasks">
-                <input type="text" id="task_input" placeholder="Write a task and press Enter"><br>
-                <button id="voice-button">Add Task by Voice
-                    <span id="mic-icon" class="mic-off"><svg width="30" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 18h2v4h-2v-4z"/>
-                        </svg>
-                    </span>
-                </button>
-                <div id="task_list"></div>
-            </div>
-            <div class="box_button">
-                <button id="clear-btn">Clear Now</button>             
-            </div>                   
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <input type="checkbox" id="theme-toggle" />
+    <main>
+      <div class="wrapper">
+        <div class="box-title">
+          <h1>To Do List</h1>
+          <p>Stay Hydrated and Focused 💛🌱</p>
         </div>
-        </main>
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-        <script src="script.js"></script>
-    </body>
+        <div class="box-tasks">
+          <input
+            type="text"
+            id="task-input"
+            placeholder="Write a task and press Enter"
+            aria-label="Write a new task here"
+          /><br />
+          <div
+            id="voice-status"
+            class="visually-hidden"
+            aria-live="polite"
+          ></div>
+          <button id="voice-button">
+            Add Task by Voice
+            <span id="mic-icon" class="mic-off" aria-hidden="true">
+              <svg
+                width="30"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 14 0h-2zM11 18h2v4h-2v-4z"
+                />
+              </svg>
+            </span>
+          </button>
+          <div
+            id="task-list"
+            role="list"
+            aria-live="polite"
+            aria-label="Your tasks"
+          ></div>
+        </div>
+        <div class="box-button">
+          <button id="clear-btn">Clear Now</button>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,20 +1,23 @@
 # Voice-Controlled Todo App
+
 A minimal to-do list web app that incorporates a basic assistive-tech element: voice-controlled task input. Users can add tasks by speaking, type if preferred, and manage tasks with simple, clear UI interactions. The app also includes keyboard-accessible control, which makes it usable for people who can’t rely on a mouse and instead interact through assistive devices such as switch controls, on-screen keyboards, or screen readers.
 
 ## Technologies Used
+
 - HTML
 - CSS
 - Vanilla JavaScript (no frameworks)
 - Web Speech API
 
 ## Features
-- Add tasks by typing and pressing Enter 
+
+- Add tasks by typing and pressing Enter
 - Speak a task, and it will be added to the list as the app uses the Web Speech API for voice-controlled task input
 - Fully operable by keyboard (Tab to navigate, Enter/Space to activate) so it works with assistive tech that emulates keyboard events
 - Visual feedback (mic icon changes when listening)
 - Alert displayed when the browser doesn't support speech
-- Click the green circle to mark tasks as complete   
-- Long tasks automatically wrap  
+- Click the green circle to mark tasks as complete
+- Long tasks automatically wrap
 - "Clear Now" button to reset everything
 - LocalStorage persistence (tasks survive page refresh)
 - Confetti animation when all tasks are completed
@@ -23,6 +26,7 @@ A minimal to-do list web app that incorporates a basic assistive-tech element: v
 - Deployed to Netlify
 
 ## What I Learned & Practiced
+
 - Perfect vertical centering with `align-items: center` on multi-line flex items
 - Preventing layout shift with `flex-shrink: 0`
 - Word wrapping long text using `word-break` and `overflow-wrap`
@@ -32,28 +36,26 @@ A minimal to-do list web app that incorporates a basic assistive-tech element: v
 - Using CSS `@keyframes` to create simple pulse animations
 - Working with the Web Speech API (speech recognition events, transcripts, errors)
 
-
-  
 ## Live Demo
+
 Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-todo-app.netlify.app/)
 
-
 ## Screenshot
+
 <img width="1350" height="597" alt="ss_to_do_list" src="https://github.com/user-attachments/assets/bff8f23d-f95d-4113-847d-67ba1f9a7431" />
 
-
-
-
 ## Future Improvements (Planned)
+
 - Option to edit and delete tasks
-- Add the number of total, completed, and incomplete tasks to the page 
+- Add the number of total, completed, and incomplete tasks to the page
 - Add separate to-do lists for each day of the week (Monday–Sunday)
 - Create lists for monthly and yearly tasks too
 - Add three buttons to the top of the page, by clicking on which users can navigate between their yearly, monthly, and weekly to-do lists
 
-
 ## Feedback Welcome!
+
 Open an issue or reach out – always happy to connect.
 
-- - -
+---
+
 Built with patience and care by [Mətanət](https://github.com/matanatkhalil) while staying hydrated and focused 💛🌱

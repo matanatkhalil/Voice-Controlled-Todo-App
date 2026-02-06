@@ -1,0 +1,35 @@
+{
+  "name": "voice-controlled-todo-app",
+  "version": "1.0.0",
+  "description": "A minimal to-do list web app that incorporates a basic assistive-tech element: voice-controlled task input. Users can add tasks by speaking, type if preferred, and manage tasks with simple, clear UI interactions. The app also includes keyboard-accessible control, which makes it usable for people who can’t rely on a mouse and instead interact through assistive devices such as switch controls, on-screen keyboards, or screen readers.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matanatkhalil/Voice-Controlled-Todo-App.git"
+  },
+  "keywords": [
+    "todo-list",
+    "voice-recognition",
+    "web-speech-api",
+    "accessibility",
+    "a11y",
+    "javascript",
+    "responsive-design",
+    "keyboard-navigation",
+    "frontend"
+  ],
+  "author": "Matanat Khalilova",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/matanatkhalil/Voice-Controlled-Todo-App/issues"
+  },
+  "homepage": "https://github.com/matanatkhalil/Voice-Controlled-Todo-App#readme",
+  "devDependencies": {
+    "prettier": "^3.8.1"
+  }
+}
