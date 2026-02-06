@@ -108,6 +108,10 @@ const createTaskElement = (taskText, isCompleted = false) => {
       const updatedText = newText.value.trim();
       if (updatedText) {
         text.textContent = updatedText;
+        deleteBtn.setAttribute("title", `Delete task "${updatedText}"`);
+        deleteBtn.setAttribute("aria-label", `Delete task "${updatedText}"`);
+        editBtn.setAttribute("title", `Edit task "${updatedText}"`);
+        editBtn.setAttribute("aria-label", `Edit task "${updatedText}"`);
         task.replaceChild(text, newText);
         saveTasks();
       } else {
