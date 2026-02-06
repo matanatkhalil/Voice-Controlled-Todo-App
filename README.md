@@ -44,6 +44,20 @@ Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-tod
 
 <img width="1350" height="597" alt="ss_to_do_list" src="https://github.com/user-attachments/assets/bff8f23d-f95d-4113-847d-67ba1f9a7431" />
 
+## Setup Guide
+
+To get this project running locally and set up the development tools:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/matanatkhalil/Voice-Controlled-Todo-App.git
+2. **Navigate to the project directory:**
+`cd Voice-Controlled-Todo-App`
+2. **Install dependencies:**
+`npm install`
+3. **Format the code** (If you make changes and want to clean up the styling):
+`npm run format`
+
 ## Future Improvements (Planned)
 
 - Option to edit and delete tasks
