@@ -24,6 +24,17 @@ const createTaskElement = (taskText, isCompleted = false) => {
   const circle = document.createElement("div");
   circle.classList.add("task-circle");
 
+  const deleteBtn = document.createElement("button");
+  const editBtn = document.createElement("button");
+  const groupBtns = document.createElement("div");
+  groupBtns.classList.add("group-btns");
+  deleteBtn.classList.add("delete-btn");
+  editBtn.classList.add("edit-btn");
+  deleteBtn.textContent = "🗑️";
+  editBtn.textContent = "✏️";
+  groupBtns.appendChild(editBtn);
+  groupBtns.appendChild(deleteBtn);
+
   if (isCompleted) {
     task.classList.add("completed");
     circle.classList.add("completed");
@@ -36,6 +47,11 @@ const createTaskElement = (taskText, isCompleted = false) => {
   circle.setAttribute("role", "button"); // tells assistive tech that it's actionable
   circle.setAttribute("tabindex", "0"); // makes it reacable by Tab
   circle.setAttribute("aria-label", `Mark task "${taskText}" as completed`);
+
+  deleteBtn.setAttribute("aria-label", `Delete task "${taskText}"`);
+  editBtn.setAttribute("aria-label", `Edit task "${taskText}"`);
+  deleteBtn.setAttribute("title", `Delete task "${taskText}"`);
+  editBtn.setAttribute("title", `Edit task "${taskText}"`);
 
   // Mouse toggle
   circle.addEventListener("click", () => {
@@ -66,7 +82,49 @@ const createTaskElement = (taskText, isCompleted = false) => {
 
   task.appendChild(circle);
   task.appendChild(text);
+  task.appendChild(groupBtns);
   taskList.appendChild(task);
+
+  // Delete functionality
+  deleteBtn.addEventListener("click", () => {
+    if (confirm(`Are you sure you want to delete the task: "${taskText}"?`)) {
+      task.remove();
+      saveTasks();
+    }
+  });
+
+  // Edit functionality
+  editBtn.addEventListener("click", () => {
+    let isCancelled = false;
+    const newText = document.createElement("input");
+    newText.type = "text";
+    newText.value = text.textContent;
+    newText.classList.add("edit-input");
+    task.replaceChild(newText, text);
+    newText.focus();
+
+    const saveEdit = () => {
+      if (isCancelled) return; // Don't save if cancelled
+      const updatedText = newText.value.trim();
+      if (updatedText) {
+        text.textContent = updatedText;
+        task.replaceChild(text, newText);
+        saveTasks();
+      } else {
+        task.replaceChild(text, newText); // Cancel edit if empty
+      }
+    };
+
+    newText.addEventListener("blur", saveEdit);
+    newText.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && newText.value.trim() !== "") {
+        saveEdit();
+      } else if (e.key === "Escape") {
+        isCancelled = true;
+        task.replaceChild(text, newText); // Cancel edit
+      }
+    });
+  });
 };
 
 taskInput.addEventListener("keydown", (event) => {

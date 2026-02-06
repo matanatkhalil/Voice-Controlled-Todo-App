@@ -18,6 +18,7 @@ A minimal to-do list web app that incorporates a basic assistive-tech element: v
 - Alert displayed when the browser doesn't support speech
 - Click the green circle to mark tasks as complete
 - Long tasks automatically wrap
+- Option to edit and delete tasks
 - "Clear Now" button to reset everything
 - LocalStorage persistence (tasks survive page refresh)
 - Confetti animation when all tasks are completed
@@ -51,16 +52,16 @@ To get this project running locally and set up the development tools:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/matanatkhalil/Voice-Controlled-Todo-App.git
+   ```
 2. **Navigate to the project directory:**
-`cd Voice-Controlled-Todo-App`
-2. **Install dependencies:**
-`npm install`
-3. **Format the code** (If you make changes and want to clean up the styling):
-`npm run format`
+   `cd Voice-Controlled-Todo-App`
+3. **Install dependencies:**
+   `npm install`
+4. **Format the code** (If you make changes and want to clean up the styling):
+   `npm run format`
 
 ## Future Improvements (Planned)
 
-- Option to edit and delete tasks
 - Add the number of total, completed, and incomplete tasks to the page
 - Add separate to-do lists for each day of the week (Monday–Sunday)
 - Create lists for monthly and yearly tasks too
