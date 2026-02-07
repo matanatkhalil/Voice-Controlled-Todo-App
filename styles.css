@@ -121,7 +121,7 @@ button {
   position: relative;
   margin-top: 0.5rem;
   padding: 1rem;
-  height: 33rem;
+  height: 35rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -155,7 +155,7 @@ button#voice-button {
   align-items: center;
   word-break: break-word; /* long words wrap */
   overflow-wrap: anywhere;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0;
   padding: 0.5rem;
   flex: 1;
   gap: 0.5rem;
@@ -296,13 +296,10 @@ button:focus,
 @media (max-width: 768px) {
   .wrapper {
     max-width: 95%;
-    margin: 0.5rem auto;
   }
 
   .box-tasks {
-    /* Use vh so it scales to the specific phone screen height */
     height: 70vh;
-    padding: 0.8rem;
   }
 }
 
@@ -310,6 +307,9 @@ button:focus,
 @media (min-width: 768px) and (max-width: 1024px) {
   .wrapper {
     max-width: 75%; /* Slightly wider on tablets */
+  }
+  .box-tasks {
+    height: 60vh;
   }
 }
 
