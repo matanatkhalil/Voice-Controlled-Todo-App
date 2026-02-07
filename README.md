@@ -44,7 +44,8 @@ Check out the app here: [Voice-Controlled Todo App](https://voice-controlled-tod
 
 ## Screenshot
 
-<img width="1350" height="597" alt="ss_to_do_list" src="https://github.com/user-attachments/assets/bff8f23d-f95d-4113-847d-67ba1f9a7431" />
+<img width="1349" height="639" alt="voice-controlled-todo-app-ss" src="https://github.com/user-attachments/assets/40d84412-8ef7-4d1d-80fd-fbdcf75081bc" />
+
 
 ## Setup Guide
 
