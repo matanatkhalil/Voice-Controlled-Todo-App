@@ -292,10 +292,17 @@ button:focus,
 
 /* Media Queries for different screen sizes */
 
-/* Mobile - use more width */
+/* Mobile - use more width and height */
 @media (max-width: 768px) {
   .wrapper {
-    max-width: 95%; /* Use more screen on mobile */
+    max-width: 95%;
+    margin: 0.5rem auto;
+  }
+
+  .box-tasks {
+    /* Use vh so it scales to the specific phone screen height */
+    height: 70vh;
+    padding: 0.8rem;
   }
 }
 
