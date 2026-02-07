@@ -19,6 +19,7 @@ A minimal to-do list web app that incorporates a basic assistive-tech element: v
 - Click the green circle to mark tasks as complete
 - Long tasks automatically wrap
 - Option to edit and delete tasks
+- Task stats with the number of total, completed, and pending tasks
 - "Clear Now" button to reset everything
 - LocalStorage persistence (tasks survive page refresh)
 - Confetti animation when all tasks are completed
@@ -62,7 +63,6 @@ To get this project running locally and set up the development tools:
 
 ## Future Improvements (Planned)
 
-- Add the number of total, completed, and incomplete tasks to the page
 - Add separate to-do lists for each day of the week (Monday–Sunday)
 - Create lists for monthly and yearly tasks too
 - Add three buttons to the top of the page, by clicking on which users can navigate between their yearly, monthly, and weekly to-do lists

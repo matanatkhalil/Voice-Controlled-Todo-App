@@ -1,6 +1,7 @@
 const clearBtn = document.getElementById("clear-btn");
 const taskList = document.getElementById("task-list");
 const boxTasks = document.querySelector(".box-tasks");
+const taskStats = document.querySelector(".task-stats");
 const voiceButton = document.getElementById("voice-button");
 const micIcon = document.getElementById("mic-icon");
 const taskInput = document.getElementById("task-input");
@@ -14,6 +15,7 @@ const saveTasks = () => {
       completed: task.classList.contains("completed"),
     });
   });
+  updateStats();
   localStorage.setItem("tasks", JSON.stringify(tasks));
 };
 
@@ -100,7 +102,7 @@ const createTaskElement = (taskText, isCompleted = false) => {
     newText.type = "text";
     newText.value = text.textContent;
     newText.classList.add("edit-input");
-    task.replaceChild(newText, text);
+    task.replaceChild(newText, text); // Replace text span with input (newText - input element (new child); text - old span element (old child))
     newText.focus();
 
     const saveEdit = () => {
@@ -112,10 +114,10 @@ const createTaskElement = (taskText, isCompleted = false) => {
         deleteBtn.setAttribute("aria-label", `Delete task "${updatedText}"`);
         editBtn.setAttribute("title", `Edit task "${updatedText}"`);
         editBtn.setAttribute("aria-label", `Edit task "${updatedText}"`);
-        task.replaceChild(text, newText);
+        task.replaceChild(text, newText); // Replace input with updated text (text - span element (new child); newText - input element (old child))
         saveTasks();
       } else {
-        task.replaceChild(text, newText); // Cancel edit if empty
+        task.replaceChild(text, newText); // Cancel edit if empty (replace input with old text when 'updatedText' is empty)
       }
     };
 
@@ -140,8 +142,21 @@ taskInput.addEventListener("keydown", (event) => {
   }
 });
 
+const updateStats = () => {
+  const total = taskList.querySelectorAll(".task").length;
+  const completed = taskList.querySelectorAll(".task.completed").length;
+  const pending = total - completed;
+
+  document.getElementById("total-count").textContent = total;
+  document.getElementById("completed-count").textContent = completed;
+  document.getElementById("pending-count").textContent = pending;
+
+  taskStats.style.display = total === 0 ? "none" : "flex";
+};
+
 clearBtn.addEventListener("click", () => {
   taskList.innerHTML = "";
+  updateStats();
   saveTasks(); // saves empty state
 });
 
@@ -198,6 +213,7 @@ const loadTasks = () => {
       createTaskElement(taskData.text, taskData.completed);
     });
   }
+  updateStats();
 };
 
 window.addEventListener("load", loadTasks);

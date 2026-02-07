@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Georgia", Garamond, serif;
-  background-image: url("images/image2.source-unsplash.jpg"); /* Specify the path to your image */
+  background-image: url("images/image2.source-unsplash.jpg");
   background-size: cover; /* Scale the image to cover the entire viewport */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -120,6 +120,7 @@ button {
   justify-content: center; /* Center content vertically */
 }
 .box-tasks {
+  position: relative;
   margin-top: 1rem;
   padding: 1rem;
   min-height: 25rem; /* starting height */
@@ -128,6 +129,8 @@ button {
 }
 #task-list {
   text-align: left;
+  flex-grow: 1; /* Takes up all available space above the stats */
+  overflow-y: auto; /* This makes ONLY the tasks scrollable */
 }
 button {
   margin-top: 1rem;
@@ -158,6 +161,7 @@ button#voice-button {
   min-width: 0; /* allow shrinking */
   flex-wrap: nowrap; /* explicitly prevent wrapping */
   overflow: hidden; /* optional – hides any overflow instead of breaking layout */
+  hyphens: auto;
 }
 
 .task span {
@@ -238,6 +242,40 @@ button:focus,
   color: red;
   animation: pulse 1s infinite;
 }
+.task-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0 1.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1.2rem;
+  border-top: 0.063rem solid rgba(0, 128, 0, 0.2);
+  background-color: inherit; /* Matches the box color */
+  flex-shrink: 0; /* Prevents the stats from squashing */
+}
+
+#theme-toggle:not(:checked) ~ main .task-stats {
+  color: black;
+}
+#theme-toggle:not(:checked) ~ main #total-count {
+  color: rgb(106, 106, 106);
+}
+#theme-toggle:not(:checked) ~ main #pending-count {
+  color: #eb5916;
+}
+#theme-toggle:not(:checked) ~ main #completed-count {
+  color: green;
+}
+#theme-toggle:checked ~ main #total-count {
+  color: white;
+}
+#theme-toggle:checked ~ main #completed-count {
+  color: rgb(131, 255, 94);
+}
+#theme-toggle:checked ~ main #pending-count {
+  color: rgb(250, 163, 0);
+}
+
 @keyframes pulse {
   0%,
   100% {
